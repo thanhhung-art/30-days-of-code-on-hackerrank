@@ -1,0 +1,17 @@
+function Solution(){
+  //Write your code here
+    let stack = [];
+    let queue = [];
+    this.pushCharacter = (s) => {
+        stack.push(s);
+    }
+    this.enqueueCharacter = (s) => {
+        queue.push(s);
+    }
+    this.popCharacter = () => {
+        return stack.pop();
+    }
+    this.dequeueCharacter = () => {
+        return queue.shift();
+    }
+}
