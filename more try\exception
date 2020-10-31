@@ -1,0 +1,20 @@
+class Calculator{
+    constructor(n,p){
+        this.n = n;
+        this.p = p;
+    }
+    power(n,p){
+        return n >= 0 && p >= 0 ? Math.pow(n,p) : `n and p should be non-negative`;
+    }
+}
+
+var myCalculator=new Calculator();
+  try{
+    var n=parseInt(0);
+    var p=parseInt(10);
+    var ans=myCalculator.power(n,p);
+    console.log(ans);
+  }
+  catch(e){
+    console.log(e);
+  }
