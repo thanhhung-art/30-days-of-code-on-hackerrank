@@ -1,0 +1,21 @@
+ var n = parseInt(readLine());
+    a = readLine().split(' ');
+    a = a.map(Number);
+    // Write Your Code Here
+    let numOfSwaps = 0;
+    for(let i = 0; i < n ; i++){
+        for (let j = 0; j < n-1 ; j++){
+            if(a[j] > a[j+1]){
+                let b = a[j];
+                let c = a[j+1];
+                a.splice(j,2,c,b);
+                numOfSwaps++;
+            }
+        }
+        if(numOfSwaps == 0){
+            break;
+        }
+    }
+    console.log(`Array is sorted in ${numOfSwaps} swaps.`);
+    console.log(`First Element: ${a[0]}`);
+    console.log(`Last Element: ${a[a.length-1]}`)
