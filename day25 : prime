@@ -1,7 +1,7 @@
 function processData(input) {
     //Enter your code here
    let s = [];
-    let arr = input.split("\n");
+    let arr = input.split("\n").map(Number);
     arr.shift();
     for(let i of arr){
         let a = 0;
