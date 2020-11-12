@@ -1,0 +1,20 @@
+function main() {
+    const N = parseInt(readLine(), 10);
+    let arr = [];
+
+    for (let NItr = 0; NItr < N; NItr++) {
+        const firstNameEmailID = readLine().split(' ');
+
+        const firstName = firstNameEmailID[0];
+
+        const emailID = firstNameEmailID[1];
+        let test = /(?<!not)@gmail.com/g.test(emailID);
+        if(test){
+            arr.push(firstName+"\n");
+        }
+        
+    }
+    
+    console.log(arr.sort().join(""));
+    
+}
